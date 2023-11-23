@@ -1,6 +1,6 @@
 import "./Css/Login.css";
 import ilustration from "../../Images/Ilustration-Login.png";
-import ilustrationAvif from "../../Images/Ilustration-login.avif"
+import ilustrationAvif from "../../Images/Ilustration-Login.avif"
 import { Login } from "./Components/Login";
 import { Signin } from "./Components/Signin";
 import { useState } from "react";
