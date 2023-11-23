@@ -36,7 +36,7 @@ export function Login({ onFormSwitch }) {
 
  function logIn() {
     axios
-      .post("http://localhost:80/api/auth/login",
+      .post("https://api-classmaster.onrender.com/api/auth/login",
        { email: values.email, password: values.password })
       .then(response => {
         response = response.data
