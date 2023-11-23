@@ -8,7 +8,7 @@
 }
 
 .home {
-  background-image: url(../../../Images/Fondo.avif), url(../../../Images/Fondo.jpg);
+  background-image: url(../../../Images/Fondo.webp), url(../../../Images/Fondo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
