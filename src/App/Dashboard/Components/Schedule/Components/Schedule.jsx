@@ -1,7 +1,7 @@
 import "../Styles.css";
 import logoClassMaster from "../../../../../Images/Logo.png"
 import emptyIcon from "../../../../../Images/caja-vacia.png"
-import emptyIconAvif from "../../../../../Images/caja-vacia.avif"
+import emptyIcon1 from "../../../../../Images/caja-vacia.webp"
 import { SubjectSchedule } from "./SubjectSchedule";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -57,7 +57,7 @@ export function Schedule({user}) {
               <h2 className="schedule-empty__title">El horario esta vacio... Agregue algunas asignaturas.</h2>
               <div className="schedule-empty__icon">
                 <picture>
-                  <source srcSet={emptyIconAvif} type="image/avif" /> 
+                  <source srcSet={emptyIcon1} type="image/webp" /> 
                   <img src={emptyIcon} alt="vacio" />
                 </picture>
               </div>

@@ -1,6 +1,6 @@
 import "./Css/Login.css";
 import ilustration from "../../Images/Ilustration-Login.png";
-import ilustrationAvif from "../../Images/Ilustration-Login.avif"
+import ilustration1 from "../../Images/Ilustration-Login.webp"
 import { Login } from "./Components/Login";
 import { Signin } from "./Components/Signin";
 import { useState } from "react";
@@ -17,7 +17,7 @@ export default function Access({Form = "Login"}) {
       {currentForm === "Login" ? <Login onFormSwitch={toggleForm}/> : <Signin onFormSwitch={toggleForm}/>}
       <div className="access-box imagen-svg">
         <picture className="imagen-svg__img">
-          <source srcSet={ilustrationAvif} type="image/avif" />
+          <source srcSet={ilustration1} type="image/webp" />
           <img src={ilustration} ></img>
         </picture>
       </div>
