@@ -16,9 +16,9 @@ export default function Access({Form = "Login"}) {
     <section className="Access">
       {currentForm === "Login" ? <Login onFormSwitch={toggleForm}/> : <Signin onFormSwitch={toggleForm}/>}
       <div className="access-box imagen-svg">
-        <picture>
+        <picture className="imagen-svg__img">
           <source srcSet={ilustrationAvif} type="image/avif" />
-          <img src={ilustration} className="imagen-svg__img"></img>
+          <img src={ilustration} ></img>
         </picture>
       </div>
     </section>
