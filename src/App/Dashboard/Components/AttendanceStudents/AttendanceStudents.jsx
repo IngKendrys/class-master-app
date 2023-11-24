@@ -279,7 +279,7 @@ export function AttendanceStudents({Option, user}) {
                                         <img
                                             src={
                                                 student.avatar ===
-                                                    "http://localhost:80/api/images/undefined"
+                                                    "https://api-classmaster.onrender.com/api/images/undefined"
                                                     ? profile
                                                     : student.avatar
                                             }
