@@ -21,7 +21,7 @@ export function AccountSetup({user, toggleAccountSetup, updateState}) {
         password: false,
         confirmPassword: false})
     const [values, setValues] = useState({
-        avatar: userDefault,
+        avatar: user.avatar || userDefault,
         name: "",
         lastName: "",
         phoneNumber: "",
