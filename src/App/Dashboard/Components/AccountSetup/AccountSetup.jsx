@@ -35,7 +35,7 @@ export function AccountSetup({user, toggleAccountSetup, updateState}) {
         const fetchingData = () => {
           axios
             .get(
-              `http://localhost:80/api/users/${user.email}`,
+              `https://api-classmaster.onrender.com/api/users/${user.email}`,
               { headers: { Authorization: `Bearer ${user.tokenSession}` } }
             )
             .then((Response) => {
