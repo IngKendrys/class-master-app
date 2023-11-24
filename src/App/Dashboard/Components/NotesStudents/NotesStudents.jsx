@@ -46,7 +46,7 @@ export function NotesStudents({ user }) {
     async function getAllStudents() {
         try {
             const response = await axios.get(
-                `http://localhost:80/api/students/${user.email}`,
+                `https://api-classmaster.onrender.com/api/students/${user.email}`,
                 { headers: { Authorization: `Bearer ${user.tokenSession}` } }
             );
             setStudents(response.data);
@@ -63,7 +63,7 @@ export function NotesStudents({ user }) {
         if (data.subject !== undefined && data.group !== undefined) {
             try {
                 const response = await axios.get(
-                    `http://localhost:80/api/students/${user.email}/${data.subject}`,
+                    `https://api-classmaster.onrender.com/api/students/${user.email}/${data.subject}`,
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
                 setStudents(response.data);
@@ -82,7 +82,7 @@ export function NotesStudents({ user }) {
         if (data.group !== "" && data.group !== undefined) {
             try {
                 const response = await axios.get(
-                    `http://localhost:80/api/students/${user.email}/${data.subject}/${data.group}`,
+                    `https://api-classmaster.onrender.com/api/students/${user.email}/${data.subject}/${data.group}`,
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
                 setStudents(response.data);
@@ -196,7 +196,7 @@ export function NotesStudents({ user }) {
 
     const patchNote = (studentId, value, index) => {
         return axios.patch(
-            `http://localhost:80/api/students/notes/${user.email}/${studentId}/${data.subject}/${data.group}`,
+            `https://api-classmaster.onrender.com/api/students/notes/${user.email}/${studentId}/${data.subject}/${data.group}`,
             { note: value, index: index },
             {
                 headers: {
