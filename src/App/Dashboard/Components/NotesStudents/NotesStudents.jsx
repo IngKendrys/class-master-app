@@ -104,7 +104,7 @@ export function NotesStudents({ user }) {
     const handlePDF = () => {
         axios
             .get(
-                `http://localhost:80/api/students/archivo/exportarPDF/${user.email}/${data.subject}/${data.group}`,
+                `https://api-classmaster.onrender.com/api/students/archivo/exportarPDF/${user.email}/${data.subject}/${data.group}`,
                 {
                     responseType: 'arraybuffer',
                     headers: {
