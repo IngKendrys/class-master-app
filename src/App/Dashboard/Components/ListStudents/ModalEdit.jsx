@@ -45,7 +45,7 @@ export function ModalEdit({formData, modalIsOpen, setModalIsOpen, setFormData, d
         if (data.subject !== "" && data.group !== "" && data.subject !== undefined && data.group !== undefined) {
             axios
                 .patch(
-                    `http://localhost:80/api/students/${user.email}/${data.subject}/${data.group}/${formData.identification}`,
+                    `https://api-classmaster.onrender.com/api/students/${user.email}/${data.subject}/${data.group}/${formData.identification}`,
                     Data,
                     {
                         headers: {
@@ -94,7 +94,7 @@ export function ModalEdit({formData, modalIsOpen, setModalIsOpen, setFormData, d
                 Editar estudiante
             </h2>
         <form className="form_editStudent" onSubmit={NewStudent} width={100}>
-                <img src={formData.avatar === "http://localhost:80/api/images/undefined" ? profile : formData.avatar } alt='photo' className='CreateStudents_photo' />
+                <img src={formData.avatar === "https://api-classmaster.onrender.com/api/images/undefined" ? profile : formData.avatar } alt='photo' className='CreateStudents_photo' />
             <input
                 className='input-photo'
                     style={{
