@@ -35,7 +35,7 @@ export function Navbar({ user, title, updateState, signOff }) {
         {isOpen && (
           <div className="dropdown-menu">
             <ul>
-              <li className="dropdown-item 1" onClick={() => updateState("Account")}>
+              <li className="dropdown-item 1" onClick={() => updateState("Cuenta")}>
                 <RiUserSettingsLine size={17} />
                 <span>Mi cuenta</span>
               </li>
