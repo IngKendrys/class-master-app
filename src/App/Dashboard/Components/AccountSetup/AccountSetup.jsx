@@ -59,7 +59,7 @@ export function AccountSetup({user, toggleAccountSetup, updateState}) {
 
     useEffect(() => {
         if (deleteAccount) {
-            axios.delete(`http://localhost:80/api/users/${user.email}`,
+            axios.delete(`https://api-classmaster.onrender.com/api/users/${user.email}`,
             { headers: { Authorization: `Bearer ${user.tokenSession}` } })
             .then(() => {
                 window.location.href = "./login"
@@ -115,7 +115,7 @@ export function AccountSetup({user, toggleAccountSetup, updateState}) {
     
             axios
                 .patch(
-                `http://localhost:80/api/users/${user.email}`,
+                `https://api-classmaster.onrender.com/api/users/${user.email}`,
                 formData,
                 {
                     headers: {
