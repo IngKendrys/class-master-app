@@ -31,7 +31,7 @@ export function AttendanceStudents({Option, user}) {
     async function getAllStudents() {
         try {
             const response = await axios.get(
-                `http://localhost:80/api/students/${user.email}`,
+                `https://api-classmaster.onrender.com/api/students/${user.email}`,
                 { headers: { Authorization: `Bearer ${user.tokenSession}` } }
             );
             setStudents(response.data);
@@ -49,7 +49,7 @@ export function AttendanceStudents({Option, user}) {
         if (data.subject !== undefined && data.group !== undefined) {
             try {
                 const response = await axios.get(
-                    `http://localhost:80/api/students/${user.email}/${data.subject}`,
+                    `https://api-classmaster.onrender.com/api/students/${user.email}/${data.subject}`,
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
                 setStudents(response.data);
@@ -70,7 +70,7 @@ export function AttendanceStudents({Option, user}) {
         if (data.group !== "" && data.group !== undefined) {
             try {
                 const response = await axios.get(
-                    `http://localhost:80/api/students/${user.email}/${data.subject}/${data.group}`,
+                    `https://api-classmaster.onrender.com/api/students/${user.email}/${data.subject}/${data.group}`,
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
                 setStudents(response.data);
@@ -126,7 +126,7 @@ export function AttendanceStudents({Option, user}) {
         if (data.group !== "" && data.group !== undefined && date !== undefined) {
             try {
                 const response = await axios.get(
-                    `http://localhost:80/api/students/Date/${user.email}/${data.subject}/${data.group}/${date.toString()}`,
+                    `https://api-classmaster.onrender.com/api/students/Date/${user.email}/${data.subject}/${data.group}/${date.toString()}`,
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
                 const history = response.data;
@@ -143,7 +143,7 @@ export function AttendanceStudents({Option, user}) {
     //REGISTRO DE ASISTENCIA
     function patchAttendance(studentId, attendance) {
         if (data.group !== "" && data.group !== undefined && date === currentDate) {
-            return axios.patch(`http://localhost:80/api/students/asistencia/${user.email}/${studentId}/${data.subject}/${data.group}`,
+            return axios.patch(`https://api-classmaster.onrender.com/api/students/asistencia/${user.email}/${studentId}/${data.subject}/${data.group}`,
                     { attendance: [{ date: currentDate.toString(), status: attendance }] },
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
