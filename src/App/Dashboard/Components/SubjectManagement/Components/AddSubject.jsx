@@ -7,8 +7,8 @@ import minus from "../../../../../Images/iconmonstr-line-one-horizontal-lined.sv
 import 'react-time-picker/dist/TimePicker.css';
 import 'react-clock/dist/Clock.css';
 
-export function AddSubject ({ user, subject = {name: "", code: ""}, isEdit = "", handlePassSubjects, getSubjects }) {
-  const [values, setValues] = useState({name: subject.name, code: subject.code, group: subject.group || 1, schedules: subject.schedules || []})
+export function AddSubject ({ user, subject = {name: "", code: "", group: 1}, isEdit = "", handlePassSubjects, getSubjects }) {
+  const [values, setValues] = useState({name: subject.name, code: subject.code, group: subject.group, schedules: subject.schedules || []})
   const [handleEdit, setHandleEdit] = useState({name: false, code: false, group: false, schedules: false, submit: false})
   const [title, setTitle] = useState("Agregar asignatura")
   const groupName = subject.group && subject.group.toString()
