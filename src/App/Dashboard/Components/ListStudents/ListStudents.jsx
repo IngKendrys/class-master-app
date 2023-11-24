@@ -124,7 +124,7 @@ export function ListStudents({ Option, user }) {
   const handleDeleteStudent = (studentId) => {
     const result = window.confirm(`¿Deseas eliminar el estudiante con N° de identificación: ${studentId}?`);
     if (result) {
-      axios.delete(`http://localhost:80/api/students/${user.email}/${data.subject}/${data.group}/${studentId}`,
+      axios.delete(`https://api-classmaster.onrender.com/api/students/${user.email}/${data.subject}/${data.group}/${studentId}`,
         { headers: { Authorization: `Bearer ${user.tokenSession}` } })
         .then(() => {
           setShowAlert(true);
