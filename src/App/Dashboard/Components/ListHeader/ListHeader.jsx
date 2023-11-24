@@ -22,7 +22,7 @@ export function ListHeader({user, setData}) {
         const fetchSubjects = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:80/api/subjects/${user.email}`,
+                    `https://api-classmaster.onrender.com/api/subjects/${user.email}`,
                     { headers: { Authorization: `Bearer ${user.tokenSession}` } }
                 );
                 setSubjects(response.data);
